@@ -3,8 +3,14 @@
 
 :root {
    --primary-color: #6244C5;
+   --primary-hover-color: #523b9e;
    --white-color: #ffffff;
    --black-color: #000000;
+
+   ::selection {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+   }
 }
 
 * {
@@ -27,6 +33,7 @@ body {
    color: var(--black-color);
    font-family: "DM Sans", sans-serif;
    scroll-behavior: smooth;
+   transition: .5s;
 }
 
 nav {
@@ -83,12 +90,12 @@ nav .CTA .Links a {
    all: unset;
    color: var(--black-color);
    font-family: "DM Sans";
-   font-size: 1.25;
+   font-size: 1.25rem;
    font-weight: 400;
    cursor: pointer;
 
    &:hover {
-      font-size: 1.35;
+      font-size: 1.35rem;
       font-weight: 600;
       transition: .5s;
    }
@@ -164,6 +171,14 @@ nav .CTA .Social-Links {
       gap: 1.5dvw;
    }
 
+   nav .CTA .Links a {
+      font-size: 1.05rem;
+
+      &:hover {
+         font-size: 1.15rem;
+      }
+   }
+
    nav .CTA .Social-Links {
       gap: 1dvw;
    }
@@ -181,8 +196,15 @@ nav .CTA .Social-Links {
    }
 
    nav .CTA .Links {
-
       gap: 1.5dvw;
+   }
+
+   nav .CTA .Links a {
+      font-size: 1.15rem;
+
+      &:hover {
+         font-size: 1.25rem;
+      }
    }
 
    nav .CTA .Social-Links {
@@ -226,5 +248,781 @@ nav .CTA .Social-Links {
 
    nav .CTA .Social-Links {
       gap: .8dvw;
+   }
+}
+
+.Home {
+   width: 90%;
+   min-height: 80dvh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   padding: 2dvh 4dvw;
+   margin: auto;
+}
+
+.Home .Continer {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+
+}
+
+.Home .Continer .Home-Text {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   gap: 2dvh;
+   order: 1;
+}
+
+.Home .Continer .Home-Image {
+   width: 50%;
+   height: 100%;
+   margin: auto;
+   display: flex;
+   justify-content: end;
+   order: 2;
+}
+
+.Home .Continer .Home-Text .I-am {
+   color: var(--primary-color);
+   font-size: 28px;
+   font-weight: 500;
+}
+
+.Home .Continer .Home-Text h1 {
+   color: var(--black-color);
+   font-size: 64px;
+   font-weight: 700;
+   line-height: normal;
+}
+
+.Home .Continer .Home-Text span {
+   color: var(--black-color);
+   font-size: 32px;
+   font-weight: 400;
+}
+
+.Home .Continer .Home-Text .Buttons {
+   display: flex;
+   align-items: center;
+   gap: .8dvw;
+   padding: auto;
+}
+
+.Home .Continer .Home-Text .Buttons a {
+   all: unset;
+   padding: 1dvh 1.5dvw;
+   border: 1px solid var(--black-color);
+   font-size: 16px;
+   font-weight: 500;
+   border-radius: 8px;
+   outline: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+
+   &:hover {
+      transition: .5s;
+      background-color: var(--black-color);
+      color: var(--white-color);
+   }
+}
+
+.Home .Continer .Home-Text .Buttons a:nth-child(2) {
+   background-color: var(--primary-color);
+   border: 1px solid var(--primary-color);
+   color: var(--white-color);
+
+   &:hover {
+      transition: .5s;
+      background-color: var(--white-color);
+      color: var(--primary-color);
+   }
+}
+
+@media only screen and (max-width: 480px) {
+
+   .Home {
+      width: 90%;
+      padding: 2dvh 2dvw;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      flex-direction: column;
+      gap: 8dvh;
+   }
+
+   .Home .Continer .Home-Text {
+      width: 100%;
+      height: 100%;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image img {
+      width: 70%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      font-size: 20px;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      font-size: 48px;
+   }
+
+   .Home .Continer .Home-Text span {
+      font-size: 20px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      gap: 2dvw;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      padding: .9dvh 3dvw;
+      font-size: 12px;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
+   }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
+   }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
+   }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
+   }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
+   }
+}
+
+@media (min-width: 1601px) {
+
+   .Home {
+      width: 90%;
+      min-height: 80dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 2dvh 4dvw;
+      margin: auto;
+   }
+
+   .Home .Continer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+
+   }
+
+   .Home .Continer .Home-Text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2dvh;
+      order: 1;
+   }
+
+   .Home .Continer .Home-Image {
+      width: 50%;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: end;
+      order: 2;
+   }
+
+   .Home .Continer .Home-Text .I-am {
+      color: var(--primary-color);
+      font-size: 28px;
+      font-weight: 500;
+   }
+
+   .Home .Continer .Home-Text h1 {
+      color: var(--black-color);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+   }
+
+   .Home .Continer .Home-Text span {
+      color: var(--black-color);
+      font-size: 32px;
+      font-weight: 400;
+   }
+
+   .Home .Continer .Home-Text .Buttons {
+      display: flex;
+      align-items: center;
+      gap: .8dvw;
+      padding: auto;
+   }
+
+   .Home .Continer .Home-Text .Buttons a {
+      all: unset;
+      padding: 1dvh 1.5dvw;
+      border: 1px solid var(--black-color);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--black-color);
+         color: var(--white-color);
+      }
+   }
+
+   .Home .Continer .Home-Text .Buttons a:nth-child(2) {
+      background-color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         transition: .5s;
+         background-color: var(--white-color);
+         color: var(--primary-color);
+      }
    }
 }
