@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+   --primary-color: #6244C5;
+   --white-color: #ffffff;
+   --black-color: #000000;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   overflow-wrap: break-word;
+   word-break: break-all;
+   flex-wrap: wrap;
+   transition: .5s;
+}
+
+html,
+body {
+   background-color: var(--white-color);
+   overflow-x: hidden;
+   width: 100dvw;
+   height: 100dvh;
+   color: var(--black-color);
+   font-family: "DM Sans", sans-serif;
+   scroll-behavior: smooth;
+}
+
+nav {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   padding: 2dvh 4dvw;
+   margin: auto;
+}
+
+nav .Logo {
+   width: fit-content;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: .5dvh;
+   color: #0D0B0B;
+   font-family: "DM Sans";
+   font-size: 1.625rem;
+   font-weight: 600;
+   opacity: 0.9;
+   cursor: pointer;
+}
+
+nav .Logo span:nth-child(2) {
+   color: #6244C5;
+}
+
+nav .CTA {
+   width: fit-content;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1.5dvw;
+}
+
+nav .CTA .Links {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1dvw;
+}
+
+nav .CTA .Links a {
+   all: unset;
+   color: var(--black-color);
+   font-family: "DM Sans";
+   font-size: 1.25;
+   font-weight: 400;
+   cursor: pointer;
+
+   &:hover {
+      font-size: 1.35;
+      font-weight: 600;
+      transition: .5s;
+   }
+}
+
+nav .CTA .Social-Links {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: .8dvw;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 480px) {
+   nav {
+      width: 95%;
+      padding: 3dvh 4dvw;
+   }
+
+   nav .CTA .Links {
+      display: none;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 3dvw;
+   }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+   nav {
+      width: 95%;
+      padding: 2dvh 4dvw;
+   }
+
+   nav .CTA .Links {
+      display: none;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 3dvw;
+   }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+   nav {
+      width: 95%;
+      padding: 2dvh 4dvw;
+   }
+
+   nav .CTA .Links {
+      display: none;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 2dvw;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+   nav {
+      width: 95%;
+      padding: 2dvh 2dvw;
+   }
+
+   nav .CTA {
+      gap: 2dvw;
+   }
+
+   nav .CTA .Links {
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 1dvw;
+   }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+   nav {
+      width: 90%;
+      padding: 2dvh 4dvw;
+   }
+
+   nav .CTA {
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Links {
+
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 1dvw;
+   }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+
+   nav {
+      width: 90%;
+   }
+
+   nav .CTA {
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Links {
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Social-Links {
+      gap: 1dvw;
+   }
+}
+
+@media (min-width: 1601px) {
+
+   nav {
+      width: 90%;
+      padding: 2dvh 4dvw;
+   }
+
+   nav .CTA {
+      gap: 1.5dvw;
+   }
+
+   nav .CTA .Links {
+      gap: 1dvw;
+   }
+
+   nav .CTA .Social-Links {
+      gap: .8dvw;
+   }
+}
