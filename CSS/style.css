@@ -9,6 +9,7 @@
    --neutral-color-200: #F5F5F5;
    --neutral-color-300: #EEEEEE;
    --neutral-color-400: #E0E0E0;
+   --neutral-color-700: #757575;
    --neutral-color-800: #616161;
    --neutral-color-900: #424242;
 
@@ -24,7 +25,6 @@
    scroll-behavior: smooth;
    box-sizing: border-box;
    overflow-wrap: break-word;
-   word-break: break-all;
    flex-wrap: wrap;
    transition: .5s;
 }
@@ -51,6 +51,7 @@ nav {
    align-items: center;
    flex-direction: row;
    flex-wrap: wrap;
+   overflow: hidden;
 }
 
 nav #Logo {
@@ -298,4 +299,179 @@ nav #navButton {
          height: 1.3rem;
       }
    }
+}
+
+@media (min-width: 1601px) {
+   nav {
+      width: 90%;
+      margin-top: 3.5dvh;
+   }
+
+   nav #Logo {
+      font-size: 1.5rem;
+   }
+
+   nav #navLinks {
+      gap: 1.40rem;
+   }
+
+   nav #navLinks a {
+      font-size: 1.10rem;
+   }
+
+   nav #navButton {
+      font-size: 0.9rem;
+      gap: .375rem;
+      padding: 0.6rem 0.7rem 0.6rem 1rem;
+
+      img {
+         width: 1.2rem;
+         height: 1.2rem;
+      }
+   }
+}
+
+#Home {
+   height: 90dvh;
+   width: 90%;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+   gap: 7%;
+}
+
+#Home #Home-leftContainer {
+   height: fit-content;
+   width: 33%;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+#Home-leftContainer #homeText #I-am {
+   width: 100%;
+   color: var(--primary-color);
+   font-size: 1.75rem;
+   font-weight: 400;
+   line-height: 140%;
+   letter-spacing: 0.2px;
+   margin-bottom: 1rem;
+}
+
+#Home-leftContainer #homeText h1 {
+   width: 100%;
+   color: var(--neutral-color-900);
+   font-size: 4rem;
+   font-weight: 700;
+   margin-bottom: 1rem;
+}
+
+#Home-leftContainer #homeText span,
+#Home-leftContainer #homeText .Typewritter-Effect {
+   width: 100%;
+   color: var(--neutral-color-900);
+   font-size: 1.8rem;
+   font-weight: 500
+}
+
+#Home-leftContainer #homeText #subHeading {
+   margin-top: 1.5rem;
+   margin-bottom: 2.25rem;
+   width: 90%;
+   color: var(--neutral-color-700);
+   font-size: 0.875rem;
+   font-weight: 400;
+   line-height: 140%;
+   letter-spacing: 0.2px;
+}
+
+#Home-leftContainer #homeText #homeButtons {
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1rem;
+
+   a {
+      all: unset;
+      padding: .625rem 1.5rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 99999px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+   }
+
+   a:nth-child(1) {
+      border: 1px solid transparent;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+
+      &:hover {
+         border: 1px solid var(--primary-color);
+         background-color: transparent;
+         color: var(--primary-color);
+         transition: 0.5s;
+      }
+   }
+
+   a:nth-child(2) {
+      border: 1px solid var(--black-color);
+      background-color: transparent;
+      color: var(--black-color);
+
+      &:hover {
+         border: 1px solid transparent;
+         background-color: var(--black-color);
+         color: var(--white-color);
+         transition: 0.5s;
+      }
+   }
+}
+
+#Home #Home-rightContainer {
+   height: 90%;
+   width: 60%;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   background-color: #ffffff;
+   overflow: hidden;
+   position: relative;
+
+   img:nth-child(1) {
+      width: fit-content;
+      height: auto;
+      position: absolute;
+      left: 5dvw;
+      bottom: 15dvh;
+   }
+
+   img:nth-child(2) {
+      width: fit-content;
+      height: auto;
+      position: absolute;
+      right: 5dvw;
+      top: 10dvh;
+   }
+
+   img:nth-child(3) {
+      width: fit-content;
+      height: auto;
+      position: absolute;
+      right: 8dvw;
+      bottom: 10dvh;
+   }
+
+   img:nth-child(4) {}
+
+
 }
