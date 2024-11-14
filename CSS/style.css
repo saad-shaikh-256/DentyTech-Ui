@@ -6,6 +6,12 @@
    --primary-color: #6E6CDF;
    --black-color: #212121;
 
+   --neutral-color-200: #F5F5F5;
+   --neutral-color-300: #EEEEEE;
+   --neutral-color-400: #E0E0E0;
+   --neutral-color-800: #616161;
+   --neutral-color-900: #424242;
+
    ::selection {
       background-color: var(--primary-color);
       color: var(--white-color);
@@ -33,4 +39,91 @@ body {
    font-family: "DM Sans", sans-serif;
    scroll-behavior: smooth;
    transition: .5s;
+}
+
+nav {
+   width: 90%; 
+   height: fit-content;
+   margin: auto;
+   margin-top: 4dvh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+nav #Logo {
+   all: unset;
+   cursor: pointer;
+   color: var(--black-color);
+   font-size: 1.5rem;
+   font-weight: 600;
+   line-height: 140%;
+   letter-spacing: 0.2px;
+
+   & span:nth-child(2) {
+      color: var(--primary-color);
+   }
+}
+
+nav #navLinks {
+   width: fit-content;
+   height: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+nav #navLinks a {
+   all: unset;
+   cursor: pointer;
+   color: var(--neutral-color-800);
+   font-size: 1.25rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 140%;
+   letter-spacing: 0.2px;
+
+   &:hover {
+      color: var(--black-color);
+      font-weight: 600;
+      transition: 0.5s ease-in-out;
+   }
+
+   &:nth-child(1) {
+      color: var(--black-color);
+      font-weight: 600;
+   }
+
+}
+
+nav #navButton {
+   all: unset;
+   color: var(--neutral-color-900);
+   font-size: 1rem;
+   font-weight: 500;
+   line-height: 140%;
+   letter-spacing: 0.2px;
+   cursor: pointer;
+   width: fit-content;
+   height: fit-content;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: .375rem;
+   padding: 0.5rem 0.75rem 0.5rem 1rem;
+   border-radius: 99999px;
+   background: var(--neutral-color-200);
+   border: 1px solid var(--neutral-color-300);
+
+   &:hover {
+      border: 1px solid var(--neutral-color-400);
+      transition: 0.5s ease-in-out;
+   }
 }
