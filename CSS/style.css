@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-   --primary-color: #6244C5;
-   --primary-hover-color: #523b9e;
    --white-color: #ffffff;
-   --black-color: #000000;
+   --primary-color: #6E6CDF;
+   --black-color: #212121;
 
    ::selection {
       background-color: var(--primary-color);
