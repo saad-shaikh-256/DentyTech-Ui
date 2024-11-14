@@ -42,7 +42,7 @@ body {
 }
 
 nav {
-   width: 90%; 
+   width: 90%;
    height: fit-content;
    margin: auto;
    margin-top: 4dvh;
@@ -98,7 +98,6 @@ nav #navLinks a {
       color: var(--black-color);
       font-weight: 600;
    }
-
 }
 
 nav #navButton {
@@ -125,5 +124,178 @@ nav #navButton {
    &:hover {
       border: 1px solid var(--neutral-color-400);
       transition: 0.5s ease-in-out;
+   }
+
+   img {
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #navLinks {
+      display: none;
+   }
+
+   nav #navButton {
+      font-size: 0.85rem;
+      font-weight: 500;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         width: 1.125rem;
+         height: 1.125rem;
+      }
+   }
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #navLinks {
+      display: none;
+   }
+
+   nav #navButton {
+      font-size: 0.85rem;
+      font-weight: 500;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         width: 1.125rem;
+         height: 1.125rem;
+      }
+   }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #Logo {
+      font-size: 1.4rem;
+   }
+
+   nav #navLinks {
+      gap: 1.10rem;
+   }
+
+   nav #navLinks a {
+      font-size: 1rem;
+
+   }
+
+   nav #navButton {
+      font-size: 0.9rem;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         height: 1.10rem;
+         width: 1.10rem;
+      }
+   }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #Logo {
+      font-size: 1.4rem;
+   }
+
+   nav #navLinks {
+      gap: 1.20rem;
+   }
+
+   nav #navLinks a {
+      font-size: 1rem;
+   }
+
+   nav #navButton {
+      font-size: 0.9rem;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         width: 1.10rem;
+         height: 1.10rem;
+      }
+   }
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #Logo {
+      font-size: 1.45rem;
+   }
+
+   nav #navLinks {
+      gap: 1.30rem;
+   }
+
+   nav #navLinks a {
+      font-size: 1.10rem;
+   }
+
+   nav #navButton {
+      font-size: 0.9rem;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         width: 1.3rem;
+         height: 1.3rem;
+      }
+   }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+   nav {
+      width: 90%;
+      margin-top: 3dvh;
+   }
+
+   nav #Logo {
+      font-size: 1.45rem;
+   }
+
+   nav #navLinks {
+      gap: 1.30rem;
+   }
+
+   nav #navLinks a {
+      font-size: 1.10rem;
+   }
+
+   nav #navButton {
+      font-size: 0.9rem;
+      gap: .375rem;
+      padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+
+      img {
+         width: 1.3rem;
+         height: 1.3rem;
+      }
    }
 }
