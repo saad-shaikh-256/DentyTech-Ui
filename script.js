@@ -3,7 +3,7 @@ const images = [
     src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Bg Image 1",
     rotate: -30,
-    text: "Advanced Technology",
+    text: "Technology",
     icon: "ri-settings-3-line",
   },
   {
@@ -34,15 +34,15 @@ container.className = "w-full h-full flex justify-center items-center gap-8";
 
 images.forEach((img, idx) => {
   const wrapper = document.createElement("div");
-  wrapper.className = `h-[320px] w-[230px] sm:h-[350px] sm:w-[260px] md:h-[380px] md:w-[290px] lg:h-[420px] lg:w-[350px] overflow-hidden absolute top-1/2 left-1/2 text-center rounded-3xl`;
+  wrapper.className = `h-[280px] w-[200px] sm:h-[350px] sm:w-[260px] md:h-[380px] md:w-[290px] lg:h-[420px] lg:w-[350px] overflow-hidden absolute top-1/2 left-1/2 text-center rounded-3xl`;
   wrapper.style.zIndex = idx + 1;
 
   wrapper.innerHTML = `
      <img src="${img.src}" alt="${img.alt}" class="object-cover w-full h-full" />
      <div class="icon-Text h-fit w-full absolute bottom-6">
        <div class="h-fit w-full flex justify-center">
-         <i class="${img.icon} bg-white h-10 w-10 font-medium text-2xl rounded-full flex justify-center items-center"></i>
-         <span class="bg-white text-black font-semibold text-base rounded-full flex justify-center items-center px-4">${img.text}</span>
+         <i class="${img.icon} bg-white h-8 w-8 sm:h-10 sm:w-10 font-medium text-lg sm:text-2xl rounded-full flex justify-center items-center"></i>
+         <span class="bg-white text-black font-semibold text-xs sm:text-base rounded-full flex justify-center items-center px-4">${img.text}</span>
        </div>
      </div>
    `;
@@ -67,8 +67,6 @@ gsap.fromTo(
     stagger: 0.2,
   }
 );
-
-
 
 gsap.set(".gsap-top", { y: "-100%", opacity: 0 });
 gsap.to(".gsap-top", {
