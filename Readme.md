@@ -85,7 +85,7 @@ To run this project locally:
 
 ## 🙌 Credits
 
-- **UI Design Inspiration:** [Dribbble Shot by Sabba Keynejad](https://dribbble.com/shots/22620941-Dental-Care-Landing-Page)
+- **UI Design Inspiration:** [Dribbble Shot by Bogdan Falin](https://dribbble.com/shots/22620941-Dental-Care-Landing-Page)
 - **Developed by [Saad Shaikh](https://saad-shaikh.vercel.app/)**
 
 ---
