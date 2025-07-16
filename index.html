@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ff4500" />
+
+    <!-- Website Title -->
+    <title>DentyTech</title>
+
+    <!-- CSS File (Tailwind) -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favcion -->
+    <link
+      rel="shortcut icon"
+      href="./src/Assets/Logo/Dentytech.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    class="h-dvh w-dvw bg-white text-black font-montserrat overflow-hidden flex flex-col justify-between"
+  >
+    <nav class="h-fit w-full flex justify-between px-6 sm:px-10 py-6 sm:py-8">
+      <div
+        id="nav-Left"
+        class="gsap-top h-fit w-fit flex justify-center items-center text-xs md:text-base font-medium order-2 sm:order-1"
+      >
+        <span
+          class="cursor-pointer border border-black px-2.5 py-1.5 rounded-full"
+          >Menu</span
+        >
+        <i
+          class="ri-menu-3-line cursor-pointer border border-black px-2.5 py-1.5 rounded-full"
+        ></i>
+      </div>
+      <div
+        id="nav-Center"
+        class="gsap-top h-fit w-fit flex justify-center items-center gap-2 text-sm sm:text-lg md:text-xl font-medium order-1 sm:order-2"
+      >
+        <i
+          class="ri-tooth-line h-8 w-8 flex justify-center items-center text-white bg-primary rounded-full"
+        ></i>
+        <span class="uppercase font-semibold">Dentytech</span>
+      </div>
+      <div
+        id="nav-Right"
+        class="gsap-top h-fit w-fit hidden sm:flex justify-center items-center gap-0.5 text-xs md:text-base font-medium order-3"
+      >
+        <button
+          class="cursor-pointer border border-black px-3 py-2 rounded-full"
+        >
+          Log In
+        </button>
+        <button
+          class="cursor-pointer border border-primary bg-primary text-white px-3 py-2 rounded-full"
+        >
+          Sign Up
+        </button>
+      </div>
+    </nav>
+
+    <main class="h-fit w-full grow">
+      <h1
+        class="gsap-opacity text-Container w-full uppercase font-semibold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+      >
+        Our Advantages
+      </h1>
+
+      <div id="images-root"></div>
+    </main>
+
+    <footer
+      class="h-fit w-full flex justify-between px-6 sm:px-10 py-6 sm:py-8 relative"
+    >
+      <div
+        id="footer-Left"
+        class="gsap-bottom h-fit w-fit flex justify-center items-center text-xs md:text-base font-medium"
+      >
+        <span class="">Your Smile, Our Passion</span>
+      </div>
+      <div
+        id="nav-Right"
+        class="gsap-bottom h-fit w-fit flex justify-center items-center gap-2 text-lg md:text-2xl"
+      >
+        <i class="ri-instagram-line"></i>
+        <i class="ri-youtube-line"></i>
+        <i class="ri-facebook-circle-line"></i>
+      </div>
+    </footer>
+
+    <!-- JS File -->
+    <script type="module" src="./script.js"></script>
+
+    <!-- GSAP Link -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </body>
+</html>
